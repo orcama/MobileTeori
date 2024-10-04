@@ -1,5 +1,7 @@
 import 'package:aplikasirestoran/app/modules/logRegis/bindings/logregis_binding.dart';
 import 'package:aplikasirestoran/app/modules/logRegis/views/logregis_view.dart';
+import 'package:aplikasirestoran/app/modules/login/bindings/login_binding.dart';
+import 'package:aplikasirestoran/app/modules/login/views/login_view.dart';
 import 'package:aplikasirestoran/app/modules/register/bindings/register_binding.dart';
 import 'package:aplikasirestoran/app/modules/register/views/register_view.dart';
 import 'package:get/get.dart';
@@ -12,7 +14,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.REGISTER;
+  static const INITIAL = Routes.LOGIN;
 
   static final routes = [
     GetPage(
@@ -29,6 +31,11 @@ class AppPages {
       name: _Paths.REGISTER,
       page: () => const RegisterView(),
       binding: RegisterBinding(),
+    ),
+     GetPage(
+      name: _Paths.LOGIN,
+      page: () => const LoginView(),
+      binding: LoginBinding(),
     ),
   ];
 }
