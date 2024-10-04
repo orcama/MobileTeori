@@ -29,23 +29,15 @@ class LoginView extends GetView<LoginController> {
               children: [
                 // Logo
                 CircleAvatar(
-                  radius: 50,
+                  radius: 70,
                   backgroundColor: Colors.yellow.shade700,
-                  child: Icon(
-                    Icons.restaurant,
-                    size: 50,
-                    color: Colors.white,
+                  child: Image.asset(
+                    'assets/LOGO.png',
+                    width: 90,
+                    height: 90,
                   ),
                 ),
-                SizedBox(height: 16),
-                Text(
-                  'Bleach Restaurants',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black87,
-                  ),
-                ),
+                
                 SizedBox(height: 32),
                 // Login button
                 ElevatedButton(
