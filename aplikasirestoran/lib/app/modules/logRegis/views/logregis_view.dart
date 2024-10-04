@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-import '../controllers/login_controller.dart';
+import '../controllers/logregis_controller.dart';
 
-class LoginView extends GetView<LoginController> {
-  const LoginView({super.key});
+class LogregisView extends GetView<LogregisController> {
+  const LogregisView({super.key});
   @override
   Widget build(BuildContext context) {
-    final LoginController controller = Get.find();
+    final LogregisController controller = Get.find();
 
     return Scaffold(
       body: Stack(
@@ -17,7 +17,7 @@ class LoginView extends GetView<LoginController> {
           Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                colors: [Colors.yellow.shade100, Colors.yellow.shade600],
+                colors: [ Colors.yellow.shade600, const Color.fromARGB(255, 253, 248, 204)],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
               ),
@@ -37,8 +37,8 @@ class LoginView extends GetView<LoginController> {
                     height: 90,
                   ),
                 ),
-                
                 SizedBox(height: 32),
+
                 // Login button
                 ElevatedButton(
                   onPressed: () {
@@ -57,6 +57,7 @@ class LoginView extends GetView<LoginController> {
                   ),
                 ),
                 SizedBox(height: 16),
+                
                 // Register button
                 OutlinedButton(
                   onPressed: () {
