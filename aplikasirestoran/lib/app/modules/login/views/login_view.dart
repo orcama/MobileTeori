@@ -13,7 +13,7 @@ class LoginView extends GetView<LoginController> {
         children: [
           // Background Image
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
                     "assets/background.png"), // Provide your background image path here
@@ -32,22 +32,22 @@ class LoginView extends GetView<LoginController> {
                       TextField(
                         onChanged: (value) =>
                             controller.emailController.value = value,
-                        decoration: InputDecoration(
+
                           labelText: 'Email',
                           border: OutlineInputBorder(),
                         ),
                       ),
-                      SizedBox(height: 16),
+                      const SizedBox(height: 16),
                       TextField(
                         obscureText: true,
                         onChanged: (value) =>
                             controller.passwordController.value = value,
-                        decoration: InputDecoration(
+
                           labelText: 'Password',
                           border: OutlineInputBorder(),
                         ),
                       ),
-                      SizedBox(height: 8),
+                      const SizedBox(height: 8),
                       // Row for "Lupa Password"
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
@@ -56,7 +56,7 @@ class LoginView extends GetView<LoginController> {
                             onPressed: () {
                               // Handle forgot password action
                             },
-                            child: Text('Lupa Password?',
+
                                 style: TextStyle(color: Colors.black54)),
                           ),
                         ],
@@ -71,24 +71,9 @@ class LoginView extends GetView<LoginController> {
                         Get.offNamed(Routes.WAGYU);
                       },
                       style: ElevatedButton.styleFrom(
-                        minimumSize: Size(double.infinity, 50),
+                        minimumSize: const Size(double.infinity, 50),
                         backgroundColor: Colors.yellow, // Match button color
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      child: Text('Login',
-                          style: TextStyle(
-                              color: const Color.fromARGB(255, 44, 44, 44))),
-                    ),
-                    SizedBox(height: 10),
-                  ],
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}

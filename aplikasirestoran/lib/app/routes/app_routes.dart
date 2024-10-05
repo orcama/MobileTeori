@@ -3,20 +3,18 @@ part of 'app_pages.dart';
 
 abstract class Routes {
   Routes._();
+
+  static const PROFILE = _Paths.PROFILE;
   static const HOME = _Paths.HOME;
   static const LOGREGIS = _Paths.LOGREGIS;
   static const REGISTER = _Paths.REGISTER;
-  static const LOGIN = _Paths.LOGIN;
-  static const ORDER = _Paths.LOGIN;
-  static const WAGYU = _Paths.WAGYU;
 }
 
 abstract class _Paths {
   _Paths._();
+  static const PROFILE = '/Profile';
   static const HOME = '/home';
   static const LOGREGIS = '/logregis';
   static const REGISTER = '/register';
-  static const LOGIN = '/login';
-  static const ORDER = '/order';
-  static const WAGYU = '/wagyu';
+
 }
