@@ -8,10 +8,6 @@ abstract class Routes {
   static const HOME = _Paths.HOME;
   static const LOGREGIS = _Paths.LOGREGIS;
   static const REGISTER = _Paths.REGISTER;
-  //profile
-
-  //reservation
-  static const RESERVATION = _Paths.RESERVATION;
 }
 
 abstract class _Paths {
@@ -20,8 +16,5 @@ abstract class _Paths {
   static const HOME = '/home';
   static const LOGREGIS = '/logregis';
   static const REGISTER = '/register';
-//profile
 
-//reservation
-  static const RESERVATION = '/Reservation';
 }
