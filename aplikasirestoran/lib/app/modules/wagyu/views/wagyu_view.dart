@@ -1,3 +1,4 @@
+import 'package:aplikasirestoran/app/modules/buttomnav/views/buttomnav_view.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -129,6 +130,7 @@ class WagyuView extends GetView<WagyuController> {
           ),  
         ],  
       ),  
+      bottomNavigationBar: const ButtomnavView(),
     );  
   }  
 }  

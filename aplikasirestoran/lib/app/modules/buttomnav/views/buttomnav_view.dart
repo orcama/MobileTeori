@@ -1,22 +1,22 @@
-import 'package:flutter/material.dart';  
-import 'package:get/get.dart';  
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../order/views/order_view.dart';
 import '../../wagyu/views/wagyu_view.dart';
-import '../controllers/buttomnav_controller.dart';  
+import '../controllers/buttomnav_controller.dart';
 
-
-class ButtomnavView extends GetView<ButtomnavController> {  
-  const ButtomnavView({super.key});  
+class ButtomnavView extends GetView<ButtomnavController> {
+  const ButtomnavView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final ButtomnavController controller = Get.find(); // Assumes NavbarController is defined
+    final ButtomnavController controller = Get.put(ButtomnavController()); // Assumes NavbarController is defined
 
     return Obx(() => BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
-          selectedItemColor: Colors.teal,  // Changed to teal as selected color
-          unselectedItemColor: Colors.grey,
+          backgroundColor: Colors.black, // Set background color to black
+          selectedItemColor: Colors.white,  // Set the selected item color to white for contrast
+          unselectedItemColor: Colors.yellow,
           currentIndex: controller.selectedIndex.value, // Observe the selected index
           onTap: (index) => controller.onItemTapped(index), // Handle tab changes
           items: const [
@@ -35,4 +35,4 @@ class ButtomnavView extends GetView<ButtomnavController> {
           ],
         ));
   }
-}  
+}
