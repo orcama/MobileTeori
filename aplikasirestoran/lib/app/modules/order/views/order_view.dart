@@ -1,3 +1,4 @@
+import 'package:aplikasirestoran/app/modules/buttomnav/views/buttomnav_view.dart';
 import 'package:flutter/material.dart';
 
 class OrderView extends StatefulWidget {  
@@ -134,7 +135,7 @@ class _OrderViewState extends State<OrderView> {
           ],  
         ),  
       ), 
-      
+      bottomNavigationBar: const ButtomnavView(),
     );  
   }  
 }  
