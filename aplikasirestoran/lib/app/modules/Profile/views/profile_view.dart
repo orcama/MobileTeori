@@ -1,3 +1,4 @@
+import 'package:aplikasirestoran/app/modules/buttomnav/views/buttomnav_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/profile_controller.dart';
@@ -68,52 +69,11 @@ class ProfileView extends GetView<ProfileController> {
                     ],
                   ),
                 )),
-            const SizedBox(height: 20),
-            // Tombol: Edit Profil, Ganti Password, Informasi
-            _buildButton('Edit Profile', Icons.edit),
-            _buildButton('Change Password', Icons.lock),
-            _buildButton('Information', Icons.info),
-            const SizedBox(height: 20),
-          ],
+          ]
         ),
       ),
       // Navigasi Bawah
-      bottomNavigationBar: _buildBottomNav(),
-    );
-  }
-
-  // Widget Tombol Kustom
-  Widget _buildButton(String title, IconData icon) {
-    return Container(
-      width: double.infinity,
-      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-      child: ElevatedButton.icon(
-        onPressed: () {},
-        icon: Icon(icon),
-        label: Text(title),
-        style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.yellow, // Warna tombol
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10),
-          ),
-        ),
-      ),
-    );
-  }
-
-  // Navigasi Bawah
-  Widget _buildBottomNav() {
-    return BottomNavigationBar(
-      currentIndex: 3, // Mengatur item "Profile" sebagai yang terpilih
-      items: const [
-        BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-        BottomNavigationBarItem(icon: Icon(Icons.menu), label: 'Menu'),
-        BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Reservation'),
-        BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
-      ],
-      backgroundColor: Colors.amber,
-      unselectedItemColor: Colors.black,
-      selectedItemColor: Colors.amber,
+      bottomNavigationBar: ButtomnavView(),
     );
   }
 }

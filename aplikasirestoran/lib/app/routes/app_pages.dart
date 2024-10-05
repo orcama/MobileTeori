@@ -6,6 +6,8 @@ import 'package:aplikasirestoran/app/modules/order/bindings/order_binding.dart';
 import 'package:aplikasirestoran/app/modules/order/views/order_view.dart';
 import 'package:aplikasirestoran/app/modules/register/bindings/register_binding.dart';
 import 'package:aplikasirestoran/app/modules/register/views/register_view.dart';
+import 'package:aplikasirestoran/app/modules/wagyu/bindings/wagyu_binding.dart';
+import 'package:aplikasirestoran/app/modules/wagyu/views/wagyu_view.dart';
 
 import 'package:get/get.dart';
 
@@ -49,10 +51,6 @@ class AppPages {
       page: () => const RegisterView(),
       binding: RegisterBinding(),
     ),
-
-    //profile
-
-    //reservation
     GetPage(
       name: _Paths.RESERVATION,
       page: () => ReservationView(),
@@ -68,5 +66,10 @@ class AppPages {
       page: () => const WagyuView(),
       binding: WagyuBinding()
       ),
+    GetPage(
+      name: _Paths.LOGIN,
+      page: () => const LoginView(),
+      binding: LoginBinding(),
+    ),
   ];
 }
