@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:get/get.dart';
-
-import '../controllers/order_controller.dart';
-
 class OrderView extends StatefulWidget {  
   const OrderView({super.key});  
 
