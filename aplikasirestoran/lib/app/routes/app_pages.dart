@@ -18,9 +18,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.LOGIN;
-  static const ORDER = Routes.ORDER;
-  static const WAGYU = Routes.WAGYU;
+  static const INITIAL = Routes.LOGREGIS;
 
   static final routes = [
     GetPage(

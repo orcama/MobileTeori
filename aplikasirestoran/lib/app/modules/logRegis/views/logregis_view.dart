@@ -1,3 +1,4 @@
+import 'package:aplikasirestoran/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -17,7 +18,10 @@ class LogregisView extends GetView<LogregisController> {
           Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                colors: [ Colors.yellow.shade600, const Color.fromARGB(255, 253, 248, 204)],
+                colors: [
+                  Colors.yellow.shade600,
+                  const Color.fromARGB(255, 253, 248, 204)
+                ],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
               ),
@@ -43,6 +47,7 @@ class LogregisView extends GetView<LogregisController> {
                 ElevatedButton(
                   onPressed: () {
                     controller.login();
+                    Get.offNamed(Routes.LOGIN);
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.yellow.shade600,
@@ -57,11 +62,12 @@ class LogregisView extends GetView<LogregisController> {
                   ),
                 ),
                 SizedBox(height: 16),
-                
+
                 // Register button
                 OutlinedButton(
                   onPressed: () {
                     controller.register();
+                    Get.offNamed(Routes.REGISTER);
                   },
                   style: OutlinedButton.styleFrom(
                     side: BorderSide(color: Colors.black),

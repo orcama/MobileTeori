@@ -1,3 +1,4 @@
+import 'package:aplikasirestoran/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/register_controller.dart';
@@ -74,7 +75,9 @@ class RegisterView extends GetView<RegisterController> {
                 Column(
                   children: [
                     ElevatedButton(
-                      onPressed: () => controller.registerUser(),
+                      onPressed: () {
+                        Get.offNamed(Routes.WAGYU);
+                      },
                       style: ElevatedButton.styleFrom(
                         minimumSize: Size(double.infinity, 50),
                         backgroundColor: Colors.yellow, // Match button color
@@ -88,6 +91,7 @@ class RegisterView extends GetView<RegisterController> {
                     TextButton(
                       onPressed: () {
                         // Handle already have account action
+                        Get.offNamed(Routes.LOGIN);
                       },
                       child: Text('Already have account', style: TextStyle(color: Colors.black54)),
                     ),
