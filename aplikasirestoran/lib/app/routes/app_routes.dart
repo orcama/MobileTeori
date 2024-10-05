@@ -3,7 +3,11 @@ part of 'app_pages.dart';
 
 abstract class Routes {
   Routes._();
-
+  static const ORDEER = _Paths.ORDER;
+  static const RESERVATION = _Paths.RESERVATION;
+  static const WAGYU = _Paths.WAGYU;
+  static const LOGIN = _Paths.LOGIN;
+  static const BUTTOMNAV = _Paths.BUTTOMNAV;
   static const PROFILE = _Paths.PROFILE;
   static const HOME = _Paths.HOME;
   static const LOGREGIS = _Paths.LOGREGIS;
@@ -12,9 +16,13 @@ abstract class Routes {
 
 abstract class _Paths {
   _Paths._();
+  static const ORDER = '/Order';
+  static const RESERVATION = '/Reservasi';
+  static const WAGYU = '/Wagyu';
+  static const LOGIN = '/Login';
+  static const BUTTOMNAV = '/Buttomnav';
   static const PROFILE = '/Profile';
   static const HOME = '/home';
   static const LOGREGIS = '/logregis';
   static const REGISTER = '/register';
-
 }

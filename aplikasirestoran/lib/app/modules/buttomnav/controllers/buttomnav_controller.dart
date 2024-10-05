@@ -10,7 +10,7 @@ class ButtomnavController extends GetxController {
   final List<String> routes = [
     Routes.LOGIN, // 0
     Routes.WAGYU, // 1
-    Routes.ORDER, // 2
+    Routes.ORDEER, // 2
   ];
 
   // Function to handle navigation based on index

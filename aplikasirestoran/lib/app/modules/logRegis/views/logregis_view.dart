@@ -41,7 +41,7 @@ class LogregisView extends GetView<LogregisController> {
                     height: 90,
                   ),
                 ),
-                const SizedBox(height: 32),
+                SizedBox(height: 32),
 
                 // Login button
                 ElevatedButton(
@@ -54,14 +54,14 @@ class LogregisView extends GetView<LogregisController> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
                     ),
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 50, vertical: 15),
+                    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
                   ),
-                  child: const Text(
+                  child: Text(
                     'LOGIN',
                     style: TextStyle(color: Colors.black, fontSize: 18),
                   ),
                 ),
+                SizedBox(height: 16),
 
                 // Register button
                 OutlinedButton(
@@ -70,14 +70,13 @@ class LogregisView extends GetView<LogregisController> {
                     Get.offNamed(Routes.REGISTER);
                   },
                   style: OutlinedButton.styleFrom(
-                    side: const BorderSide(color: Colors.black),
+                    side: BorderSide(color: Colors.black),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
                     ),
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 50, vertical: 15),
+                    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
                   ),
-                  child: const Text(
+                  child: Text(
                     'Register',
                     style: TextStyle(color: Colors.black, fontSize: 18),
                   ),
