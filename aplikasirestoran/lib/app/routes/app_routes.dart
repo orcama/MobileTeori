@@ -3,7 +3,7 @@ part of 'app_pages.dart';
 
 abstract class Routes {
   Routes._();
-  static const ORDEER = _Paths.ORDER;
+  static const ORDER = _Paths.ORDER;
   static const RESERVATION = _Paths.RESERVATION;
   static const WAGYU = _Paths.WAGYU;
   static const LOGIN = _Paths.LOGIN;
