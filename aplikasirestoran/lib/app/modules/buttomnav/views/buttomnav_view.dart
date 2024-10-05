@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../order/views/order_view.dart';
-import '../../wagyu/views/wagyu_view.dart';
 import '../controllers/buttomnav_controller.dart';
 
 class ButtomnavView extends GetView<ButtomnavController> {
