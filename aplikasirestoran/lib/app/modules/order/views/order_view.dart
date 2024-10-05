@@ -57,6 +57,7 @@ class _OrderViewState extends State<OrderView> {
                   ),  
                 ],  
               ),  
+              
               child: Row(  
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,  
                 children: [  
