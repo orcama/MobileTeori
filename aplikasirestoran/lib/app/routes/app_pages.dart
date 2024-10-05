@@ -25,9 +25,14 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.LOGIN;
+  static const INITIAL = Routes.PROFILE;
 
   static final routes = [
+    GetPage(
+      name: _Paths.PROFILE,
+      page: () => ProfileView(),
+      binding: ProfileBinding(),
+    ),
     GetPage(
       name: _Paths.LOGREGIS,
       page: () => const LogregisView(),
@@ -43,18 +48,8 @@ class AppPages {
       page: () => const RegisterView(),
       binding: RegisterBinding(),
     ),
-    GetPage(
-      name: _Paths.LOGIN,
-      page: () => const LoginView(),
-      binding: LoginBinding(),
-    ),
 
     //profile
-    GetPage(
-      name: _Paths.PROFILE,
-      page: () => ProfileView(),
-      binding: ProfileBinding(),
-    ),
 
     //reservation
     GetPage(

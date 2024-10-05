@@ -25,8 +25,8 @@ class ProfileView extends GetView<ProfileController> {
             // Gambar Profil dan Info
             const CircleAvatar(
               radius: 50,
-              backgroundImage: AssetImage(
-                  'assets/images/profile_pp.png'), // Tambahkan gambar kamu
+              backgroundImage:
+                  AssetImage('assets/PP.png'), // Tambahkan gambar kamu
             ),
             const SizedBox(height: 10),
             Obx(() => Text(
@@ -48,7 +48,8 @@ class ProfileView extends GetView<ProfileController> {
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withOpacity(0.1),
+                        color:
+                            const Color.fromARGB(255, 0, 0, 0).withOpacity(0.1),
                         blurRadius: 10,
                         offset: const Offset(0, 2),
                       ),
@@ -73,11 +74,11 @@ class ProfileView extends GetView<ProfileController> {
             _buildButton('Change Password', Icons.lock),
             _buildButton('Information', Icons.info),
             const SizedBox(height: 20),
-            // Navigasi Bawah
-            _buildBottomNav(),
           ],
         ),
       ),
+      // Navigasi Bawah
+      bottomNavigationBar: _buildBottomNav(),
     );
   }
 
@@ -103,14 +104,16 @@ class ProfileView extends GetView<ProfileController> {
   // Navigasi Bawah
   Widget _buildBottomNav() {
     return BottomNavigationBar(
-      backgroundColor: Colors.yellow,
+      currentIndex: 3, // Mengatur item "Profile" sebagai yang terpilih
       items: const [
         BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
         BottomNavigationBarItem(icon: Icon(Icons.menu), label: 'Menu'),
         BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Reservation'),
         BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
       ],
-      selectedItemColor: Colors.black,
+      backgroundColor: Colors.amber,
+      unselectedItemColor: Colors.black,
+      selectedItemColor: Colors.amber,
     );
   }
 }
