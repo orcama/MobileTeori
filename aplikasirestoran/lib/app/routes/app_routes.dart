@@ -7,6 +7,11 @@ abstract class Routes {
   static const LOGREGIS = _Paths.LOGREGIS;
   static const REGISTER = _Paths.REGISTER;
   static const LOGIN = _Paths.LOGIN;
+  //profile
+  static const PROFILE = _Paths.PROFILE;
+
+  //reservation
+  static const RESERVATION = _Paths.RESERVATION;
 }
 
 abstract class _Paths {
@@ -15,4 +20,9 @@ abstract class _Paths {
   static const LOGREGIS = '/logregis';
   static const REGISTER = '/register';
   static const LOGIN = '/login';
+//profile
+  static const PROFILE = '/Profile';
+
+//reservation
+  static const RESERVATION = '/Reservation';
 }

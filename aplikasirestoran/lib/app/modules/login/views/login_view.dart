@@ -4,7 +4,7 @@ import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
   const LoginView({super.key});
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,9 +12,10 @@ class LoginView extends GetView<LoginController> {
         children: [
           // Background Image
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage("assets/background.png"), // Provide your background image path here
+                image: AssetImage(
+                    "assets/background.png"), // Provide your background image path here
                 fit: BoxFit.cover,
               ),
             ),
@@ -28,22 +29,24 @@ class LoginView extends GetView<LoginController> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       TextField(
-                        onChanged: (value) => controller.emailController.value = value,
-                        decoration: InputDecoration(
+                        onChanged: (value) =>
+                            controller.emailController.value = value,
+                        decoration: const InputDecoration(
                           labelText: 'Email',
                           border: OutlineInputBorder(),
                         ),
                       ),
-                      SizedBox(height: 16),
+                      const SizedBox(height: 16),
                       TextField(
                         obscureText: true,
-                        onChanged: (value) => controller.passwordController.value = value,
-                        decoration: InputDecoration(
+                        onChanged: (value) =>
+                            controller.passwordController.value = value,
+                        decoration: const InputDecoration(
                           labelText: 'Password',
                           border: OutlineInputBorder(),
                         ),
                       ),
-                      SizedBox(height: 8),
+                      const SizedBox(height: 8),
                       // Row for "Lupa Password"
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
@@ -52,7 +55,8 @@ class LoginView extends GetView<LoginController> {
                             onPressed: () {
                               // Handle forgot password action
                             },
-                            child: Text('Lupa Password?', style: TextStyle(color: Colors.black54)),
+                            child: const Text('Lupa Password?',
+                                style: TextStyle(color: Colors.black54)),
                           ),
                         ],
                       ),
@@ -64,20 +68,23 @@ class LoginView extends GetView<LoginController> {
                     ElevatedButton(
                       onPressed: () => controller.registerUser(),
                       style: ElevatedButton.styleFrom(
-                        minimumSize: Size(double.infinity, 50),
+                        minimumSize: const Size(double.infinity, 50),
                         backgroundColor: Colors.yellow, // Match button color
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      child: Text('Login', style: TextStyle(color: const Color.fromARGB(255, 44, 44, 44))),
+                      child: const Text('Login',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 44, 44, 44))),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     TextButton(
                       onPressed: () {
                         // Handle already have account action
                       },
-                      child: Text('Already have account?', style: TextStyle(color: Colors.black54)),
+                      child: const Text('Already have account?',
+                          style: TextStyle(color: Colors.black54)),
                     ),
                   ],
                 ),
