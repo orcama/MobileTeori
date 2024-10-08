@@ -30,6 +30,14 @@ class ButtomnavView extends GetView<ButtomnavController> {
               icon: Icon(Icons.check_circle_outlined),
               label: '',
             ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person_outline_rounded),
+              label: ''
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.book),
+              label: ''
+            ),
           ],
         ));
   }

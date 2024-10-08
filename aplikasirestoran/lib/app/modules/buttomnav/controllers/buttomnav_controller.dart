@@ -11,6 +11,8 @@ class ButtomnavController extends GetxController {
     Routes.LOGIN, // 0
     Routes.WAGYU, // 1
     Routes.ORDER, // 2
+    Routes.PROFILE, // 3
+    Routes.RESERVATION, // 4
   ];
 
   // Function to handle navigation based on index
